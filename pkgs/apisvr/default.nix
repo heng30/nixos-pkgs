@@ -21,7 +21,8 @@ rustPlatform.buildRustPackage rec {
   });
 
   # 这里可以先为空字符串，cargoHash值会根据Cargo.lock自动生成
-  cargoHash = "sha256-H1ubv/ereRVgrxpZWNihqBjNEVWRwWQvsOk+XyOjZac=";
+  # cargoHash = "sha256-H1ubv/ereRVgrxpZWNihqBjNEVWRwWQvsOk+XyOjZac=";
+  cargoHash = "sha256-T2ZnU6RJzFdbSGdFQkD+mO7O6qahaym9dEaAwDMpAFM=";
 
   # 并行编译，大幅加快打包速度，默认是启用的。对于极少数并行编译会失败的软件包，才需要禁用。
   enableParallelBuilding = true;
