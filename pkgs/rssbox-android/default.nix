@@ -16,10 +16,11 @@ rustPlatform.buildRustPackage rec {
 
   checkType = "debug";
   doCheck = false;
+  dontWrapQtApps = true;
   enableParallelBuilding = true;
 
-  buildInputs = with pkgs; [ openssl qt5.full xorg.libxcb ];
-  nativeBuildInputs = with pkgs; [ pkg-config python3 ];
+  buildInputs = with pkgs; [ openssl qt5.full xorg.libxcb libGL.dev ];
+  nativeBuildInputs = with pkgs; [ pkg-config python3 libsForQt5.qmake ];
 
   OPENSSL_NO_VENDOR = 1;
 
