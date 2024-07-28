@@ -15,9 +15,16 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  # example
   example-package = pkgs.callPackage ./pkgs/example-package { };
   c-example-package = pkgs.callPackage ./pkgs/liboqs-test-c { };
+
+  # Qt
   encipher = pkgs.libsForQt5.callPackage ./pkgs/encipher { };
   simdict = pkgs.libsForQt5.callPackage ./pkgs/simdict { };
+
+  # Rust
   apisvr = pkgs.callPackage ./pkgs/apisvr { };
+  # cryptoinfo = pkgs.callPackage ./pkgs/cryptoinfo { };
+  cryptoinfo = pkgs.libsForQt5.callPackage ./pkgs/cryptoinfo { };
 }
