@@ -16,6 +16,8 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   example-package = pkgs.callPackage ./pkgs/example-package { };
-  c-example-package = pkgs.callPackage ./pkgs/liboqs-test-c {  };
-  apisvr = pkgs.callPackage ./pkgs/apisvr {  };
+  c-example-package = pkgs.callPackage ./pkgs/liboqs-test-c { };
+  encipher = pkgs.libsForQt5.callPackage ./pkgs/encipher { };
+  simdict = pkgs.libsForQt5.callPackage ./pkgs/simdict { };
+  apisvr = pkgs.callPackage ./pkgs/apisvr { };
 }
