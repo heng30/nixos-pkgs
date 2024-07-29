@@ -26,5 +26,6 @@
   # Rust
   apisvr = pkgs.callPackage ./pkgs/apisvr { };
   rssbox = pkgs.callPackage ./pkgs/rssbox-android { };
+  sollaw = pkgs.callPackage ./pkgs/sollaw { };
   cryptoinfo = pkgs.libsForQt5.callPackage ./pkgs/cryptoinfo { };
 }
