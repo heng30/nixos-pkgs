@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage rec {
     sha256 = "sha256-+MzYUYilZQzrfEGNx/WhYtGahk+caTEjOkl62gQpXGk=";
   });
 
-  cargoHash = "sha256-KGK6AqGA3UasUzrS5BhY9spUbmBHtVAoz0JV9v3c0oc=";
+  cargoHash = "sha256-K22JDx+J1CG70qlHsnkNMeUPaAE5Mkxd/qYGdAtIJ3o=";
 
   checkType = "debug";
   doCheck = false;
