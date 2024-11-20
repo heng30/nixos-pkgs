@@ -21,7 +21,7 @@
 
   # Qt
   encipher = pkgs.libsForQt5.callPackage ./pkgs/encipher { };
-  simdict = pkgs.libsForQt5.callPackage ./pkgs/simdict { };
+  simdict-x11 = pkgs.libsForQt5.callPackage ./pkgs/simdict-x11 { };
   simdict-wayland = pkgs.libsForQt5.callPackage ./pkgs/simdict-wayland { };
 
   # Rust
