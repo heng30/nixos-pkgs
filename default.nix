@@ -17,15 +17,19 @@
 
   # example
   example-package = pkgs.callPackage ./pkgs/example-package { };
-  c-example-package = pkgs.callPackage ./pkgs/liboqs-test-c { };
+  # c-example-package = pkgs.callPackage ./pkgs/liboqs-test-c { };
 
   # Qt
   encipher = pkgs.libsForQt5.callPackage ./pkgs/encipher { };
   simdict = pkgs.libsForQt5.callPackage ./pkgs/simdict { };
+  simdict-wayland = pkgs.libsForQt5.callPackage ./pkgs/simdict-wayland { };
 
   # Rust
   apisvr = pkgs.callPackage ./pkgs/apisvr { };
   rssbox = pkgs.callPackage ./pkgs/rssbox-android { };
   sollaw = pkgs.callPackage ./pkgs/sollaw { };
   cryptoinfo = pkgs.libsForQt5.callPackage ./pkgs/cryptoinfo { };
+
+  # Flutter
+  musicbox = pkgs.callPackage ./pkgs/musicbox { };
 }
