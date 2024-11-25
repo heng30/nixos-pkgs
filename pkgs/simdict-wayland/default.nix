@@ -9,13 +9,13 @@ stdenv.mkDerivation rec {
     repo = "simdict";
 
     # commit或者tag，不能跟随 branch！
-    rev = "197601852703cb0dff33ce987c4ba331e38ed4d7";
+    rev = "5829b4687d920d68b974ff71ea3c604f459690fb";
 
     fetchSubmodules = false;
 
     # 这里的 SHA256 校验码不会算怎么办？
     # 先注释掉，然后构建这个软件包，Nix 会报错，并提示你正确的校验码
-    sha256 = "sha256-EtigrTY5AF0VBtPv30WmItcP+umoWyl/87Zx9FbuNCw=";
+    sha256 = "sha256-qywRCVoaGUCsLYrEPki98eTs7pn8HYcHyuEYQwy9Zp0=";
   });
 
   enableParallelBuilding = true;
