@@ -1,4 +1,5 @@
-{ lib, stdenv, fetchFromGitHub, qmake, qt5Full, pkgs, wrapQtAppsHook, ... }@args:
+{ lib, stdenv, fetchFromGitHub, qmake, qt5Full, pkgs, wrapQtAppsHook, ...
+}@args:
 
 stdenv.mkDerivation rec {
   pname = "simdict";

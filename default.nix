@@ -21,13 +21,13 @@
 
   # Qt
   encipher = pkgs.libsForQt5.callPackage ./pkgs/encipher { };
-  simdict-x11 = pkgs.libsForQt5.callPackage ./pkgs/simdict-x11 { };
-  simdict-wayland = pkgs.libsForQt5.callPackage ./pkgs/simdict-wayland { };
+  simdict = pkgs.libsForQt5.callPackage ./pkgs/simdict { };
 
   # Rust
   apisvr = pkgs.callPackage ./pkgs/apisvr { };
   rssbox = pkgs.callPackage ./pkgs/rssbox-android { };
   sollaw = pkgs.callPackage ./pkgs/sollaw { };
+  project-cleaner = pkgs.callPackage ./pkgs/project-cleaner { };
   cryptoinfo = pkgs.libsForQt5.callPackage ./pkgs/cryptoinfo { };
 
   # Flutter
