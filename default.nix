@@ -20,15 +20,15 @@
   # c-example-package = pkgs.callPackage ./pkgs/liboqs-test-c { };
 
   # Qt
-  encipher = pkgs.libsForQt5.callPackage ./pkgs/encipher { };
-  simdict = pkgs.libsForQt5.callPackage ./pkgs/simdict { };
+  encipher = pkgs.callPackage ./pkgs/encipher { };
+  simdict = pkgs.callPackage ./pkgs/simdict { };
 
   # Rust
   apisvr = pkgs.callPackage ./pkgs/apisvr { };
   rssbox = pkgs.callPackage ./pkgs/rssbox-android { };
   sollaw = pkgs.callPackage ./pkgs/sollaw { };
   project-cleaner = pkgs.callPackage ./pkgs/project-cleaner { };
-  cryptoinfo = pkgs.libsForQt5.callPackage ./pkgs/cryptoinfo { };
+  cryptoinfo = pkgs.callPackage ./pkgs/cryptoinfo { };
 
   # Flutter
   musicbox = pkgs.callPackage ./pkgs/musicbox { };

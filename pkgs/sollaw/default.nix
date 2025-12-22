@@ -21,8 +21,8 @@ rustPlatform.buildRustPackage rec {
 
   OPENSSL_NO_VENDOR = 1;
 
-  buildInputs = with pkgs; [ openssl qt5.full xorg.libxcb libGL.dev ];
-  nativeBuildInputs = with pkgs; [ pkg-config python3 libsForQt5.qmake ];
+  buildInputs = with pkgs; [ openssl qt6.qtbase xorg.libxcb libGL.dev ];
+  nativeBuildInputs = with pkgs; [ pkg-config python3 qt6.qmake ];
 
   buildPhase = ''
     runHook preBuild

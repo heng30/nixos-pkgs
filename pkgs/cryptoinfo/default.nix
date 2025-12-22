@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, rustPlatform, pkgs, qmake, ... }@args:
+{ lib, stdenv, fetchFromGitHub, rustPlatform, pkgs, ... }@args:
 
 rustPlatform.buildRustPackage rec {
   # 指定包名和版本
@@ -20,8 +20,15 @@ rustPlatform.buildRustPackage rec {
   dontWrapQtApps = true;
   enableParallelBuilding = true;
 
-  buildInputs = with pkgs; [ qt5.full openssl libGL.dev sqlite.dev xorg.libxcb xdotool];
-  nativeBuildInputs = [ pkgs.python3 pkgs.pkg-config qmake ];
+  buildInputs = with pkgs; [
+    qt6.qtbase
+    openssl
+    libGL.dev
+    sqlite.dev
+    xorg.libxcb
+    xdotool
+  ];
+  nativeBuildInputs = [ pkgs.python3 pkgs.pkg-config qt6.qmake ];
 
   # stdenv.mkDerivation 自动帮你完成其余的步骤
 }
