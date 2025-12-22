@@ -28,7 +28,7 @@ rustPlatform.buildRustPackage rec {
     xorg.libxcb
     xdotool
   ];
-  nativeBuildInputs = [ pkgs.python3 pkgs.pkg-config qt6.qmake ];
+  nativeBuildInputs = with pkgs; [ python3 pkg-config qt6.qmake ];
 
   # stdenv.mkDerivation 自动帮你完成其余的步骤
 }
