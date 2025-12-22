@@ -1,5 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, qmake, qt5Full, pkgs, wrapQtAppsHook, ...
-}@args:
+{ lib, stdenv, fetchFromGitHub, qt6, ... }@args:
 
 stdenv.mkDerivation rec {
   pname = "simdict";
@@ -19,11 +18,9 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-qywRCVoaGUCsLYrEPki98eTs7pn8HYcHyuEYQwy9Zp0=";
   });
 
+  nativeBuildInputs = [ qt6.qmake qt6.wrapQtAppsHook ];
+  buildInputs = [ qt6.qtbase qt6.qtdeclarative ];
   enableParallelBuilding = true;
-
-  buildInputs = [ qt5Full ];
-  nativeBuildInputs = [ qmake wrapQtAppsHook ];
-  qtWrapperArgs = [ "--prefix PATH : $out/bin" ];
 
   installPhase = ''
     runHook preInstall

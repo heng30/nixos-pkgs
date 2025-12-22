@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchFromGitHub, qmake, qt5Full, wrapQtAppsHook, ... }@args:
+{ lib, stdenv, fetchFromGitHub, qt6, ... }@args:
 
 stdenv.mkDerivation rec {
   pname = "encipher";
@@ -18,11 +18,9 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-kehz4Pk9lMt3ZhqqaqEeST//6ny4PMJGg2XVWhVPPVU=";
   });
 
+  nativeBuildInputs = [ qt6.qmake qt6.wrapQtAppsHook ];
+  buildInputs = [ qt6.qtbase qt6.qtdeclarative ];
   enableParallelBuilding = true;
-
-  buildInputs = [ qt5Full ];
-  nativeBuildInputs = [ qmake wrapQtAppsHook ];
-  qtWrapperArgs = [ "--prefix PATH : $out/bin" ];
 
   installPhase = ''
     runHook preInstall
